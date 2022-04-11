@@ -11,14 +11,19 @@ import Form from '../../../molecules/Form'
 import {intitalValues} from '../components/init'
 import {validationSchema} from '../components/schema'
 import Summary from './summary';
+import {useDispatch} from 'react-redux'
+import {businessPlanPostRequest} from '../../../../../store/redux/buisness-plan/actions'
+import { BusinessPlan } from '../../../../../type-dictionary/business-plan';
+import {useNavigate} from 'react-router-dom'
 const steps = ['First Section', 'Second Section'];
 const QuestionnaireForm=()=>{
     const [activeStep, setActiveStep] = React.useState(0);
+    const navigate=useNavigate()
+    const dispatch=useDispatch()
 
-    const handleSubmit=(values:any)=>{
-       // here will dispatch the action
-       
-       console.log('values to be sumitted',values)
+    const handleSubmit=(values:BusinessPlan)=>{   
+       dispatch(businessPlanPostRequest(values))
+       navigate('/')
     }
     const handleNext = () => {    
       setActiveStep((prevActiveStep) => prevActiveStep + 1);  
