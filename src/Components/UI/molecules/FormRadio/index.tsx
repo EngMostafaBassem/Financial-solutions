@@ -10,8 +10,7 @@ const FormChoice:React.FC<FormRadioProps>=({label,name})=>{
         if(checked)setFieldValue(name,label)   
     } 
     return(
-       <>
-       
+       <>   
          <input type='radio' name={name} onBlur={handleBlur}  onChange={handleChange} checked={label===values[name]?true:false} /> {label}     
         </> 
     )

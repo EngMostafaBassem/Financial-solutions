@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import LandpageScreen from './Components/pages/landpage-view-screen';
 import QuestionnaireScreen from './Components/pages/questionnaire-view-screen';
 import Layout from './Components/templates/Layout';

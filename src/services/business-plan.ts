@@ -1,6 +1,6 @@
-import { BusinessPlan } from "../type-dictionary/business-plan";
 import { createServer } from "miragejs"
 
+//here will mock the post request by using miragejs package
 createServer({
     routes() {
       this.post("/api/buisness", () =>[])
