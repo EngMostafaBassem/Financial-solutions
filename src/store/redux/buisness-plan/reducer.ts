@@ -18,8 +18,8 @@ export const BusinessPlanReducer=(state=INITAL_STATE,action:any)=>{
             return {...state,isLoading:true}
         case BusinessTypes.BUSINESS_PLAN_POST_REQUEST_SUCCESS:
             return {...state,isLoading:false}
-        case BusinessTypes.BUSINESS_PLAN_POST_REQUEST_SUCCESS:
-            return {...state,hasError:true}
+        case BusinessTypes.BUSINESS_PLAN_POST_REQUEST_ERROR:
+            return {...state,isLoading:false,hasError:true}
         case BusinessTypes.CLEAR_STORE:
             return {...INITAL_STATE} 
          default:
